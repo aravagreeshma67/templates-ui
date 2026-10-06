@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>UIVerse — UI Template Collection</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">UIVerse</div>
+
+    <nav>
+        <a href="#templates">Templates</a>
+        <a href="#domains">Domains</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <a href="#templates" class="nav-button">Explore</a>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <p class="eyebrow">UI TEMPLATE COLLECTION</p>
+
+        <h1>
+            Thoughtful<br>
+            interfaces,<br>
+            <em>beautifully</em><br>
+            designed.
+        </h1>
+
+        <p class="hero-description">
+            A collection of modern, responsive interfaces designed
+            across travel and shopping experiences.
+        </p>
+
+        <a href="#templates" class="dark-button">
+            Explore Collection
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1521336575822-6da63fb45455?auto=format&fit=crop&w=1400&q=85"
+            alt="Travel and lifestyle"
+        >
+
+    </div>
+
+</section>
+
+
+<section class="stats">
+
+    <div>
+        <strong>10</strong>
+        <span>UI Templates</span>
+    </div>
+
+    <div>
+        <strong>02</strong>
+        <span>Design Domains</span>
+    </div>
+
+    <div>
+        <strong>03</strong>
+        <span>Core Technologies</span>
+    </div>
+
+</section>
+
+
+<section class="templates" id="templates">
+
+    <div class="section-heading">
+
+        <div>
+            <p class="eyebrow">THE COLLECTION</p>
+            <h2>Explore the interfaces.</h2>
+        </div>
+
+        <p>
+            Travel meets retail through carefully designed
+            digital experiences.
+        </p>
+
+    </div>
+
+
+    <div class="filters">
+
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="travel">Travel</button>
+        <button class="filter" data-filter="shopping">Shopping</button>
+
+    </div>
+
+
+    <div class="template-grid">
+
+
+        <!-- TRAVEL 1 -->
+
+        <article class="template-card" data-category="travel"
+                 onclick="openTemplate('travel-explore/index.html')">
+
+            <img
+                src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85"
+                alt="Travel Explore"
+            >
+
+            <div class="card-content">
+
+                <span>TRAVEL / 01</span>
+
+                <h3>Travel Explore</h3>
+
+                <p>
+                    Destination discovery and travel inspiration.
+                </p>
+
+                <a href="travel-explore/index.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- TRAVEL 2 -->
+
+        <article class="template-card" data-category="travel"
+                 onclick="openTemplate('trip-planner/index.html')">
+
+            <img
+                src="https://images.unsplash.com/photo-1530789253388-582c481c54b0?auto=format&fit=crop&w=900&q=85"
+                alt="Trip Planner"
+            >
+
+            <div class="card-content">
+
+                <span>TRAVEL / 02</span>
+
+                <h3>Trip Planner</h3>
+
+                <p>
+                    Organise destinations and daily itineraries.
+                </p>
+
+                <a href="trip-planner/index.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- TRAVEL 3 -->
+
+        <article class="template-card" data-category="travel"
+                 onclick="openTemplate('hotel-discovery/index.html')">
+
+            <img
+                src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=900&q=85"
+                alt="Hotel Discovery"
+            >
+
+            <div class="card-content">
+
+                <span>TRAVEL / 03</span>
+
+                <h3>Hotel Discovery</h3>
+
+                <p>
+                    Discover elegant stays and accommodation.
+                </p>
+
+                <a href="hotel-discovery/index.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- TRAVEL 4 -->
+
+        <article class="template-card" data-category="travel"
+                 onclick="openTemplate('travel-booking/index.html')">
+
+            <img
+                src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=900&q=85"
+                alt="Travel Booking"
+            >
+
+            <div class="card-content">
+
+                <span>TRAVEL / 04</span>
+
+                <h3>Travel Booking</h3>
+
+                <p>
+                    A refined interface for booking trips.
+                </p>
+
+                <a href="travel-booking/index.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- TRAVEL 5 -->
+
+        <article class="template-card" data-category="travel"
+                 onclick="openTemplate('destination-guide/index.html')">
+
+            <img
+                src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=85"
+                alt="Destination Guide"
+            >
+
+            <div class="card-content">
+
+                <span>TRAVEL / 05</span>
+
+                <h3>Destination Guide</h3>
+
+                <p>
+                    Editorial-style destination inspiration.
+                </p>
+
+                <a href="destination-guide/index.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SHOPPING 1 -->
+
+        <article class="template-card shopping-card"
+                 data-category="shopping">
+
+            <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=85"
+                alt="Amazon shopping"
+            >
+
+            <div class="card-content">
+
+                <span>SHOPPING / 01</span>
+
+                <h3>Amazon</h3>
+
+                <p>Large-scale online shopping experience.</p>
+
+                <a href="shopping/amazon.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SHOPPING 2 -->
+
+        <article class="template-card shopping-card"
+                 data-category="shopping">
+
+            <img
+                src="https://images.unsplash.com/photo-1607082349566-187342175e2f?auto=format&fit=crop&w=900&q=85"
+                alt="Flipkart shopping"
+            >
+
+            <div class="card-content">
+
+                <span>SHOPPING / 02</span>
+
+                <h3>Flipkart</h3>
+
+                <p>Modern e-commerce browsing experience.</p>
+
+                <a href="shopping/flipkart.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SHOPPING 3 -->
+
+        <article class="template-card shopping-card"
+                 data-category="shopping">
+
+            <img
+                src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=900&q=85"
+                alt="Fashion shopping"
+            >
+
+            <div class="card-content">
+
+                <span>SHOPPING / 03</span>
+
+                <h3>Myntra</h3>
+
+                <p>Fashion-focused digital shopping interface.</p>
+
+                <a href="shopping/myntra.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SHOPPING 4 -->
+
+        <article class="template-card shopping-card"
+                 data-category="shopping">
+
+            <img
+                src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=900&q=85"
+                alt="AJIO shopping"
+            >
+
+            <div class="card-content">
+
+                <span>SHOPPING / 04</span>
+
+                <h3>AJIO</h3>
+
+                <p>Contemporary fashion discovery interface.</p>
+
+                <a href="shopping/ajio.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- SHOPPING 5 -->
+
+        <article class="template-card shopping-card"
+                 data-category="shopping">
+
+            <img
+                src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=900&q=85"
+                alt="H&M shopping"
+            >
+
+            <div class="card-content">
+
+                <span>SHOPPING / 05</span>
+
+                <h3>H&M</h3>
+
+                <p>Minimal fashion storefront experience.</p>
+
+                <a href="shopping/hm.html">
+                    View Template →
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<section class="domains" id="domains">
+
+    <p class="eyebrow">TWO WORLDS</p>
+
+    <h2>
+        Travel meets retail.
+    </h2>
+
+    <p>
+        Two different domains, one shared design philosophy:
+        clean layouts, thoughtful interactions and modern interfaces.
+    </p>
+
+</section>
+
+
+<section class="about" id="about">
+
+    <p class="eyebrow">ABOUT THE COLLECTION</p>
+
+    <h2>
+        Designed for today's digital experiences.
+    </h2>
+
+    <p>
+        UIVerse is a collection of responsive UI templates
+        built using HTML, CSS and JavaScript.
+    </p>
+
+</section>
+
+
+<footer>
+
+    <span>UIVerse</span>
+
+    <span>UI Template Collection</span>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

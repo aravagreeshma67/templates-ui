@@ -1,0 +1,306 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Explore — UIVerse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- NAVBAR -->
+
+<header class="topbar">
+
+    <a href="../index.html" class="logo">
+        UIVerse
+    </a>
+
+    <a href="../index.html" class="back">
+        ← Back to collection
+    </a>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-text">
+
+        <p class="eyebrow">
+            TRAVEL / EXPLORE
+        </p>
+
+        <h1>
+            Go somewhere
+            <em>worth remembering.</em>
+        </h1>
+
+        <p class="description">
+            Discover beautiful destinations, hidden escapes
+            and unforgettable places around the world.
+        </p>
+
+        <a href="#destinations" class="button">
+            Discover places
+        </a>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=85"
+            alt="Beautiful travel destination"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- DESTINATIONS -->
+
+<section class="section" id="destinations">
+
+    <div class="section-heading">
+
+        <div>
+
+            <p class="eyebrow">
+                CURATED DESTINATIONS
+            </p>
+
+            <h2>
+                Places worth the journey.
+            </h2>
+
+        </div>
+
+        <p class="section-description">
+            Search destinations and find your next escape.
+        </p>
+
+    </div>
+
+
+    <!-- SEARCH BAR -->
+
+    <div class="search-container">
+
+        <span class="search-icon">⌕</span>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search destinations..."
+            autocomplete="off"
+        >
+
+        <button id="clearSearch">
+            Clear
+        </button>
+
+    </div>
+
+
+    <!-- SEARCH RESULT MESSAGE -->
+
+    <p id="searchMessage" class="search-message"></p>
+
+
+    <!-- DESTINATION CARDS -->
+
+    <div class="cards" id="destinationCards">
+
+
+        <!-- BALI -->
+
+        <article
+            class="card"
+            data-search="bali indonesia tropical beach temple island"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=900&q=85"
+                alt="Bali Indonesia"
+            >
+
+            <div class="card-content">
+
+                <span>INDONESIA</span>
+
+                <h3>Bali</h3>
+
+                <p>
+                    Tropical mornings and peaceful escapes.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- KRABI -->
+
+        <article
+            class="card"
+            data-search="krabi thailand beach island ocean tropical"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1538475711279-0373b6bc754e?auto=format&fit=crop&w=1200&q=85"
+                alt="Krabi Thailand"
+            >
+
+            <div class="card-content">
+
+                <span>THAILAND</span>
+
+                <h3>Krabi</h3>
+
+                <p>
+                    Turquoise waters and island adventures.
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- PARIS -->
+
+        <article
+            class="card"
+            data-search="paris france europe city eiffel tower"
+        >
+
+            <img
+                src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=900&q=85"
+                alt="Paris France"
+            >
+
+            <div class="card-content">
+
+                <span>FRANCE</span>
+
+                <h3>Paris</h3>
+
+                <p>
+                    Timeless streets and unforgettable evenings.
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+
+    <!-- NO RESULTS -->
+
+    <div id="noResults" class="no-results">
+
+        <h3>
+            No destination found.
+        </h3>
+
+        <p>
+            Try searching for Bali, Krabi or Paris.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- TRAVEL INSPIRATION -->
+
+<section class="inspiration">
+
+    <div class="inspiration-text">
+
+        <p class="eyebrow">
+            TRAVEL INSPIRATION
+        </p>
+
+        <h2>
+            Let curiosity choose your next destination.
+        </h2>
+
+        <p>
+            Sometimes the best journeys begin with a place
+            you never planned to visit.
+        </p>
+
+        <button class="button" id="inspireBtn">
+            Inspire me
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+
+    <div class="inspiration-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=1200&q=85"
+            alt="Mountain travel landscape"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <span>
+        UIVerse
+    </span>
+
+    <span>
+        Travel Explore
+    </span>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

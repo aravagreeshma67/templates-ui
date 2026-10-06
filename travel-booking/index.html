@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Travel Booking | UIVerse</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<header class="topbar">
+
+    <div class="logo">UIVerse</div>
+
+    <a href="../index.html" class="back-link">
+        ← Back to collection
+    </a>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <div>
+
+        <p class="eyebrow">TRAVEL BOOKING</p>
+
+        <h1>Make the trip<br>official.</h1>
+
+        <p class="hero-description">
+            Choose your package, enter your details
+            and get ready for your next adventure.
+        </p>
+
+    </div>
+
+
+    <div class="hero-image">
+
+        <img
+            src="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1400&q=85"
+            alt="Tropical travel destination">
+
+    </div>
+
+</section>
+
+
+<section class="booking-section">
+
+    <div class="package">
+
+        <p class="eyebrow">FEATURED PACKAGE</p>
+
+        <h2>Maldives</h2>
+
+        <p class="package-subtitle">
+            5 nights · Beach resort · Breakfast included
+        </p>
+
+        <div class="package-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?auto=format&fit=crop&w=900&q=85"
+                alt="Maldives">
+
+        </div>
+
+        <div class="price">
+            <span>From</span>
+            <strong>₹74,900</strong>
+        </div>
+
+    </div>
+
+
+    <div class="booking-card">
+
+        <p class="eyebrow">BOOK YOUR TRIP</p>
+
+        <h2>Traveller details</h2>
+
+
+        <form id="bookingForm">
+
+            <label for="name">FULL NAME</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+
+            <label for="email">EMAIL ADDRESS</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+
+            <label for="date">TRAVEL DATE</label>
+
+            <input
+                type="date"
+                id="date"
+            >
+
+
+            <label for="guests">GUESTS</label>
+
+            <select id="guests">
+
+                <option>1 Guest</option>
+                <option>2 Guests</option>
+                <option>3 Guests</option>
+                <option>4 Guests</option>
+                <option>5+ Guests</option>
+
+            </select>
+
+
+            <button type="submit" id="bookBtn">
+                Confirm booking
+            </button>
+
+        </form>
+
+
+        <p id="bookingMsg" class="booking-message"></p>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 UIVerse · Travel UI Collection
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
