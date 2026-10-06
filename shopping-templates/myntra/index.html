@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myntra - Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">MYNTRA</div>
+
+        <nav>
+            <a href="#">MEN</a>
+            <a href="#">WOMEN</a>
+            <a href="#">KIDS</a>
+            <a href="#">HOME</a>
+            <a href="#">BEAUTY</a>
+        </nav>
+
+        <div class="search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for products..."
+            >
+        </div>
+
+        <div class="header-icons">
+            <button onclick="showMessage('Profile clicked')">
+                👤 Profile
+            </button>
+
+            <button onclick="showMessage('Wishlist clicked')">
+                ♡ Wishlist
+            </button>
+
+            <button onclick="openCart()">
+                🛍️ Bag (<span id="cartCount">0</span>)
+            </button>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>FRESH FASHION</h1>
+            <p>Discover your perfect style</p>
+            <button onclick="scrollToProducts()">SHOP NOW</button>
+        </div>
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+        <h2>SHOP BY CATEGORY</h2>
+
+        <div class="category-buttons">
+            <button onclick="filterProducts('all')">ALL</button>
+            <button onclick="filterProducts('women')">WOMEN</button>
+            <button onclick="filterProducts('men')">MEN</button>
+            <button onclick="filterProducts('footwear')">FOOTWEAR</button>
+            <button onclick="filterProducts('accessories')">
+                ACCESSORIES
+            </button>
+        </div>
+    </section>
+
+
+    <!-- Products -->
+    <main class="products-section" id="productsSection">
+
+        <h2>TRENDING PRODUCTS</h2>
+
+        <div id="productGrid" class="product-grid"></div>
+
+    </main>
+
+
+    <!-- Cart -->
+    <div id="overlay" class="overlay" onclick="closeCart()"></div>
+
+    <aside id="cart" class="cart">
+
+        <div class="cart-header">
+            <h2>Your Bag</h2>
+
+            <button onclick="closeCart()">✕</button>
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-footer">
+
+            <h3>
+                Total:
+                ₹<span id="cartTotal">0</span>
+            </h3>
+
+            <button onclick="checkout()" class="checkout">
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Toast -->
+    <div id="toast" class="toast"></div>
+
+
+    <!-- Footer -->
+    <footer>
+        <h3>MYNTRA</h3>
+        <p>Fashion for everyone.</p>
+        <p>© 2026 Myntra Style Store</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+ 

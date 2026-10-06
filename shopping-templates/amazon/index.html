@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon - Online Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="amazon-logo">
+            <span>amazon</span>
+            <small>.in</small>
+            <div class="smile">⌣</div>
+        </div>
+
+        <div class="location">
+            <span class="location-icon">📍</span>
+            <div>
+                <small>Delivering to</small>
+                <strong>Chennai 600001</strong>
+            </div>
+        </div>
+
+        <div class="search-container">
+            <select id="searchCategory">
+                <option value="all">All</option>
+                <option value="electronics">Electronics</option>
+                <option value="fashion">Fashion</option>
+                <option value="home">Home</option>
+                <option value="beauty">Beauty</option>
+                <option value="books">Books</option>
+            </select>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search Amazon.in"
+            >
+
+            <button onclick="searchProducts()">🔍</button>
+        </div>
+
+        <div class="header-item">
+            <small>Hello, sign in</small>
+            <strong>Account & Lists ▾</strong>
+        </div>
+
+        <div class="header-item">
+            <small>Returns</small>
+            <strong>& Orders</strong>
+        </div>
+
+        <button class="cart-button" onclick="openCart()">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+            <strong>Cart</strong>
+        </button>
+
+    </header>
+
+
+    <!-- NAVIGATION -->
+    <nav class="nav-bar">
+
+        <button onclick="filterProducts('all')">☰ All</button>
+
+        <button onclick="filterProducts('electronics')">
+            Electronics
+        </button>
+
+        <button onclick="filterProducts('fashion')">
+            Fashion
+        </button>
+
+        <button onclick="filterProducts('home')">
+            Home
+        </button>
+
+        <button onclick="filterProducts('beauty')">
+            Beauty
+        </button>
+
+        <button onclick="filterProducts('books')">
+            Books
+        </button>
+
+        <button onclick="filterProducts('kitchen')">
+            Kitchen
+        </button>
+
+        <button onclick="filterProducts('toys')">
+            Toys
+        </button>
+
+        <button onclick="filterProducts('all')">
+            Today's Deals
+        </button>
+
+        <span class="nav-right">
+            Prime ✦
+        </span>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+            <p>WELCOME TO AMAZON</p>
+
+            <h1>Great Deals.<br>Every Day.</h1>
+
+            <p class="hero-text">
+                Discover amazing products at prices you'll love.
+            </p>
+
+            <button onclick="scrollToProducts()">
+                Shop Now
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- DEAL CARDS -->
+    <section class="deal-section">
+
+        <div class="deal-card">
+            <h2>Electronics</h2>
+            <img
+                src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?auto=format&fit=crop&w=600&q=80"
+                alt="Electronics"
+            >
+            <button onclick="filterProducts('electronics')">
+                Shop Electronics
+            </button>
+        </div>
+
+        <div class="deal-card">
+            <h2>Fashion</h2>
+            <img
+                src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=600&q=80"
+                alt="Fashion"
+            >
+            <button onclick="filterProducts('fashion')">
+                Shop Fashion
+            </button>
+        </div>
+
+        <div class="deal-card">
+            <h2>Home & Kitchen</h2>
+            <img
+                src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80"
+                alt="Kitchen"
+            >
+            <button onclick="filterProducts('home')">
+                Explore Home
+            </button>
+        </div>
+
+        <div class="deal-card">
+            <h2>Books</h2>
+            <img
+                src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d?auto=format&fit=crop&w=600&q=80"
+                alt="Books"
+            >
+            <button onclick="filterProducts('books')">
+                Browse Books
+            </button>
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+    <main class="products-section" id="productsSection">
+
+        <div class="section-heading">
+            <h2>Today's Top Deals</h2>
+            <button onclick="filterProducts('all')">
+                See all
+            </button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+    </main>
+
+
+    <!-- CART OVERLAY -->
+    <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+
+    <!-- CART -->
+    <aside class="cart" id="cart">
+
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button onclick="closeCart()">✕</button>
+        </div>
+
+        <div id="cartItems" class="cart-items">
+            <p class="empty-cart">
+                Your Amazon cart is empty.
+            </p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total:</span>
+                <strong>₹<span id="cartTotal">0</span></strong>
+            </div>
+
+            <button class="checkout-button" onclick="checkout()">
+                Proceed to Checkout
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- TOAST -->
+    <div class="toast" id="toast">
+        Product added to cart!
+    </div>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="back-top" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+            Back to top
+        </div>
+
+        <div class="footer-main">
+
+            <div>
+                <h3>Get to Know Us</h3>
+                <p>About Us</p>
+                <p>Careers</p>
+                <p>Press Releases</p>
+                <p>Amazon Science</p>
+            </div>
+
+            <div>
+                <h3>Connect with Us</h3>
+                <p>Facebook</p>
+                <p>Twitter</p>
+                <p>Instagram</p>
+            </div>
+
+            <div>
+                <h3>Make Money with Us</h3>
+                <p>Sell on Amazon</p>
+                <p>Advertise Your Products</p>
+                <p>Become an Affiliate</p>
+            </div>
+
+            <div>
+                <h3>Let Us Help You</h3>
+                <p>Your Account</p>
+                <p>Returns Centre</p>
+                <p>Help</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <strong>amazon.in</strong>
+            <p>© 2026 Amazon-Inspired Shopping Template</p>
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

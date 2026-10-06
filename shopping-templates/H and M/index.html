@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>H&M Inspired Fashion Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="top-bar">
+            <p>Free shipping on orders over ₹1,999</p>
+        </div>
+
+        <div class="navbar">
+
+            <a href="#" class="logo">H&M</a>
+
+            <nav>
+                <a href="#new">New Arrivals</a>
+                <a href="#women">Women</a>
+                <a href="#men">Men</a>
+                <a href="#kids">Kids</a>
+                <a href="#sale">Sale</a>
+            </nav>
+
+            <div class="header-actions">
+
+                <button onclick="focusSearch()" title="Search">
+                    🔍
+                </button>
+
+                <button onclick="showWishlist()" title="Wishlist">
+                    ♡
+                </button>
+
+                <button onclick="openCart()" title="Cart">
+                    🛍 <span id="cartCount">0</span>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- SEARCH -->
+
+        <div class="search-box" id="searchBox">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search products..."
+                oninput="searchProducts()"
+            >
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p>NEW SEASON</p>
+
+            <h1>
+                EVERYDAY<br>
+                FASHION
+            </h1>
+
+            <p>
+                Discover fresh styles made for every moment.
+            </p>
+
+            <a href="#products" class="hero-btn">
+                SHOP NOW
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section class="categories">
+
+        <h2>Shop by Category</h2>
+
+        <div class="category-grid">
+
+            <button onclick="filterCategory('Women')">
+                Women
+            </button>
+
+            <button onclick="filterCategory('Men')">
+                Men
+            </button>
+
+            <button onclick="filterCategory('Kids')">
+                Kids
+            </button>
+
+            <button onclick="filterCategory('Accessories')">
+                Accessories
+            </button>
+
+            <button onclick="filterCategory('All')">
+                View All
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section class="products-section" id="products">
+
+        <div class="section-heading">
+
+            <div>
+                <p>CURATED FOR YOU</p>
+                <h2>Latest Styles</h2>
+            </div>
+
+            <button onclick="filterCategory('All')" class="view-all">
+                View All →
+            </button>
+
+        </div>
+
+
+        <div class="product-grid" id="productGrid"></div>
+
+    </section>
+
+
+    <!-- ================= NEWSLETTER ================= -->
+
+    <section class="newsletter">
+
+        <div>
+
+            <p>STAY IN STYLE</p>
+
+            <h2>
+                Get the latest fashion updates.
+            </h2>
+
+            <p>
+                Sign up for new arrivals, exclusive offers
+                and style inspiration.
+            </p>
+
+        </div>
+
+        <div class="newsletter-form">
+
+            <input
+                type="email"
+                id="emailInput"
+                placeholder="Your email address"
+            >
+
+            <button onclick="subscribe()">
+                SIGN UP
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <div class="footer-column">
+
+            <h3>SHOP</h3>
+
+            <a href="#women">Women</a>
+            <a href="#men">Men</a>
+            <a href="#kids">Kids</a>
+            <a href="#sale">Sale</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>HELP</h3>
+
+            <a href="#">Customer Service</a>
+            <a href="#">Delivery</a>
+            <a href="#">Returns</a>
+            <a href="#">Contact Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>ABOUT</h3>
+
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Sustainability</a>
+
+        </div>
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">H&M</div>
+
+            <p>
+                Fashion for every style,
+                every day.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= CART ================= -->
+
+    <div class="overlay" id="overlay" onclick="closeCart()"></div>
+
+    <aside class="cart-panel" id="cartPanel">
+
+        <div class="cart-header">
+
+            <h2>Your Bag</h2>
+
+            <button onclick="closeCart()">
+                ×
+            </button>
+
+        </div>
+
+        <div id="cartItems"></div>
+
+        <div class="cart-bottom">
+
+            <div class="cart-total">
+
+                <span>Total</span>
+
+                <strong id="cartTotal">
+                    ₹0
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout-btn"
+                onclick="checkout()"
+            >
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= TOAST ================= -->
+
+    <div class="toast" id="toast"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
