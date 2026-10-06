@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flipkart - Online Shopping</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            <span>Flipkart</span>
+            <small>Explore Plus ✦</small>
+        </div>
+
+        <div class="search-box">
+
+            <span class="search-icon">🔍</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for products, brands and more"
+            >
+
+        </div>
+
+        <button
+            class="login-button"
+            onclick="showMessage('Login clicked')">
+            Login
+        </button>
+
+        <button
+            class="header-button"
+            onclick="showMessage('Become a Seller clicked')">
+            Become a Seller
+        </button>
+
+        <button
+            class="header-button"
+            onclick="showMessage('More options')">
+            More ▾
+        </button>
+
+        <button
+            class="cart-button"
+            onclick="openCart()">
+            🛒 Cart
+            <span id="cartCount">0</span>
+        </button>
+
+    </header>
+
+
+    <!-- CATEGORIES -->
+
+    <section class="category-bar">
+
+        <button onclick="filterProducts('all')">
+            <span>🛍️</span>
+            All
+        </button>
+
+        <button onclick="filterProducts('mobile')">
+            <span>📱</span>
+            Mobiles
+        </button>
+
+        <button onclick="filterProducts('electronics')">
+            <span>💻</span>
+            Electronics
+        </button>
+
+        <button onclick="filterProducts('fashion')">
+            <span>👕</span>
+            Fashion
+        </button>
+
+        <button onclick="filterProducts('beauty')">
+            <span>💄</span>
+            Beauty
+        </button>
+
+        <button onclick="filterProducts('home')">
+            <span>🏠</span>
+            Home
+        </button>
+
+        <button onclick="filterProducts('appliances')">
+            <span>⚡</span>
+            Appliances
+        </button>
+
+        <button onclick="filterProducts('sports')">
+            <span>⚽</span>
+            Sports
+        </button>
+
+        <button onclick="filterProducts('books')">
+            <span>📚</span>
+            Books
+        </button>
+
+    </section>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <h1>BIG SAVINGS DAYS</h1>
+
+            <p>
+                Great deals on products you love
+            </p>
+
+            <button onclick="scrollToProducts()">
+                SHOP NOW
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DEAL BANNER -->
+
+    <section class="deal-banner">
+
+        <div>
+            <h2>Top Deals</h2>
+
+            <p>
+                Grab the best offers before they're gone!
+            </p>
+        </div>
+
+        <button onclick="scrollToProducts()">
+            VIEW ALL
+        </button>
+
+    </section>
+
+
+    <!-- PRODUCTS -->
+
+    <main
+        id="productsSection"
+        class="products-section">
+
+        <h2>Recommended For You</h2>
+
+        <div
+            id="productGrid"
+            class="product-grid">
+        </div>
+
+    </main>
+
+
+    <!-- OVERLAY -->
+
+    <div
+        id="overlay"
+        class="overlay"
+        onclick="closeCart()">
+    </div>
+
+
+    <!-- CART -->
+
+    <aside
+        id="cart"
+        class="cart">
+
+        <div class="cart-header">
+
+            <h2>My Cart</h2>
+
+            <button onclick="closeCart()">
+                ✕
+            </button>
+
+        </div>
+
+        <div
+            id="cartItems"
+            class="cart-items">
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="total-row">
+
+                <span>Total Amount</span>
+
+                <strong>
+                    ₹<span id="cartTotal">0</span>
+                </strong>
+
+            </div>
+
+            <button
+                class="checkout"
+                onclick="checkout()">
+                PLACE ORDER
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- TOAST -->
+
+    <div
+        id="toast"
+        class="toast">
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-columns">
+
+            <div>
+                <h3>ABOUT</h3>
+
+                <p>Contact Us</p>
+                <p>About Us</p>
+                <p>Careers</p>
+            </div>
+
+            <div>
+                <h3>HELP</h3>
+
+                <p>Payments</p>
+                <p>Shipping</p>
+                <p>Cancellation & Returns</p>
+            </div>
+
+            <div>
+                <h3>POLICY</h3>
+
+                <p>Terms Of Use</p>
+                <p>Security</p>
+                <p>Privacy</p>
+            </div>
+
+            <div>
+                <h3>SOCIAL</h3>
+
+                <p>Instagram</p>
+                <p>Facebook</p>
+                <p>YouTube</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Flipkart Shopping Template
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
